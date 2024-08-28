@@ -1,25 +1,16 @@
-const book1 = {
-  title: "book1",
-  author: "Scott",
-};
+import { Book, addBookToLibrary, myLibrary } from "./library.js";
 
-const book2 = {
-  title: "book2",
-  author: "Steve",
-};
+// Create initial book objects and add them to the library
+const book1 = new Book("book1", "Scott");
+const book2 = new Book("book2", "Steve");
 
-const myLibrary = [book1, book2];
+// Add initial books to the library
+myLibrary.push(book1, book2);
 
-function Book(title, author) {
-  this.title = title;
-  this.author = author;
-}
+// Add another book to the library
+addBookToLibrary("book3", "baz");
 
-function addBookToLibrary(title, author) {
-  const newBook = new Book(title, author);
-  myLibrary.push(newBook);
-}
-
+// Function to display books on the page
 function displayOnPage() {
   // Clear any existing content
   document.body.innerHTML = "";
