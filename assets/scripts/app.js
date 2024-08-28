@@ -1,5 +1,32 @@
-const myLibrary = [];
+const book1 = {
+  title: "book1",
+  author: "Scott",
+};
 
-function Book() {}
+const book2 = {
+  title: "book2",
+  author: "Steve",
+};
 
-function addBookToLibrary() {}
+const myLibrary = [book1, book2];
+
+function Book(title, author) {
+  this.title = title;
+  this.author = author;
+}
+
+function addBookToLibrary(title, author) {
+  const newBook = new Book(title, author);
+  myLibrary.push(newBook);
+}
+
+function displayOnPage() {
+  for (let i = 0; i < myLibrary.length; i++) {
+    const book = myLibrary[i];
+    const bookInfo = document.createElement("p");
+    bookInfo.innerText = `Title: ${book.title}, Author: ${book.author}`;
+    document.body.appendChild(bookInfo);
+  }
+}
+
+displayOnPage();
