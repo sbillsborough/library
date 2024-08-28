@@ -21,6 +21,10 @@ function addBookToLibrary(title, author) {
 }
 
 function displayOnPage() {
+  // Clear any existing content
+  document.body.innerHTML = "";
+
+  // Iterate through the library and display each book
   for (let i = 0; i < myLibrary.length; i++) {
     const book = myLibrary[i];
     const bookInfo = document.createElement("p");
