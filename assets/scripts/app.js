@@ -25,3 +25,6 @@ function displayOnPage() {
 }
 
 displayOnPage();
+
+// add a button that displays a form/modal to add a new book
+// add new book on the form/modal creates/appends the new book to the html element
