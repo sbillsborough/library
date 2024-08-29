@@ -1,4 +1,5 @@
 import { Book, addBookToLibrary, myLibrary } from "./library.js";
+import { displayModal } from "./modal.js";
 
 // Create initial book objects and add them to the library
 const book1 = new Book("book1", "Scott");
@@ -25,6 +26,11 @@ function displayOnPage() {
 }
 
 displayOnPage();
+
+const addBook = document.querySelector(".add-book");
+addBook.addEventListener("click", () => {
+  console.log("Hi!");
+});
 
 // add a button that displays a form/modal to add a new book
 // add new book on the form/modal creates/appends the new book to the html element
