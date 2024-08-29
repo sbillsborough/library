@@ -28,9 +28,7 @@ function displayOnPage() {
 displayOnPage();
 
 const addBook = document.querySelector(".add-book");
-addBook.addEventListener("click", () => {
-  console.log("Hi!");
-});
+addBook.addEventListener("click", displayModal);
 
 // add a button that displays a form/modal to add a new book
 // add new book on the form/modal creates/appends the new book to the html element
