@@ -8,12 +8,12 @@ const book2 = new Book("book2", "Steve");
 myLibrary.push(book1, book2);
 
 // Add another book to the library
-addBookToLibrary("book3", "baz");
+addBookToLibrary("book3", "Baz");
 
 // Function to display books on the page
 function displayOnPage() {
   // Clear any existing content
-  document.body.innerHTML = "";
+  // document.body.innerHTML = "";
 
   // Iterate through the library and display each book
   for (let i = 0; i < myLibrary.length; i++) {
