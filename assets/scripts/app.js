@@ -1,4 +1,5 @@
-import { Book, addBookToLibrary, myLibrary, displayModal } from "./library.js";
+import { addBookToLibrary, displayModal } from "./library.js";
+import { displayOnPage } from "./displayBooks.js";
 
 // Wait for the DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", () => {
@@ -33,24 +34,3 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initial display of existing books
   displayOnPage();
 });
-
-// Function to display books on the page
-function displayOnPage() {
-  // Clear any existing content
-  document.body.innerHTML = "";
-
-  // Add the "Add Book" button back after clearing content
-  const addBookButton = document.createElement("button");
-  addBookButton.className = "add-book";
-  addBookButton.innerText = "Add Book";
-  addBookButton.addEventListener("click", displayModal);
-  document.body.appendChild(addBookButton);
-
-  // Iterate through the library and display each book
-  for (let i = 0; i < myLibrary.length; i++) {
-    const book = myLibrary[i];
-    const bookInfo = document.createElement("p");
-    bookInfo.innerText = `Title: ${book.title}, Author: ${book.author}, Status: ${book.read}`;
-    document.body.appendChild(bookInfo);
-  }
-}
