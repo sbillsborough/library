@@ -1,20 +1,17 @@
 import { Book, addBookToLibrary, myLibrary } from "./library.js";
 import { displayModal } from "./modal.js";
 
-// Create initial book objects and add them to the library
-const book1 = new Book("book1", "Scott");
-const book2 = new Book("book2", "Steve");
-
-// Add initial books to the library
-myLibrary.push(book1, book2);
-
-// Add another book to the library
-addBookToLibrary("book3", "Baz");
-
 // Function to display books on the page
 function displayOnPage() {
   // Clear any existing content
-  // document.body.innerHTML = "";
+  document.body.innerHTML = "";
+
+  // Add the "Add Book" button back after clearing content
+  const addBookButton = document.createElement("button");
+  addBookButton.className = "add-book";
+  addBookButton.innerText = "Add Book";
+  addBookButton.addEventListener("click", displayModal);
+  document.body.appendChild(addBookButton);
 
   // Iterate through the library and display each book
   for (let i = 0; i < myLibrary.length; i++) {
