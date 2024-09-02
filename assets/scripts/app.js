@@ -28,6 +28,3 @@ bookForm.addEventListener("submit", function (e) {
   // Reset form fields
   bookForm.reset();
 });
-
-// Initial display of existing books
-displayOnPage();
