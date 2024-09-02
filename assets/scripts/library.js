@@ -17,9 +17,5 @@ export function addBookToLibrary(title, author, read) {
 // Function to display the modal for adding a new book
 export function displayModal() {
   const modal = document.querySelector(".modal");
-  if (modal) {
-    modal.style.display = "block"; // Show the modal
-  } else {
-    console.error("Modal element not found");
-  }
+  modal.style.display = "block"; // Show the modal
 }
