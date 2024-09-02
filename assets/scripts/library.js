@@ -1,5 +1,5 @@
 // Exporting Book constructor function
-export function Book(title, author) {
+export function Book(title, author, read) {
   this.title = title;
   this.author = author;
   this.read = read;
