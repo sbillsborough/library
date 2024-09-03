@@ -12,5 +12,8 @@ export function displayOnPage() {
     const bookInfo = document.createElement("p");
     bookInfo.innerText = `Title: ${book.title}, Author: ${book.author}, Status: ${book.read}`;
     bookContainer.appendChild(bookInfo);
+    const deleteButton = document.createElement("button");
+    deleteButton.innerText = "Delete Book";
+    bookInfo.appendChild(deleteButton);
   });
 }
